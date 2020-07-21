@@ -13,6 +13,12 @@ export default {
       url: "http://localhost:7546",
     },
   },
-  solc: { version: "0.6.8" },
+  solc: {
+    version: "0.6.8",
+    optimizer: {
+      enabled: true,
+      runs: 200,
+    },
+  },
   paths: { artifacts: "./build/contracts" },
 };
