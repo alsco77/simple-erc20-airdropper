@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "outDir": "./transpiled/",
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "lib": ["dom", "es2015", "es2016", "es2017"],
+    "module": "CommonJS",
+    "baseUrl": ".",
+    "rootDir": ".",
+    "allowJs": true,
+    "target": "ES5",
+    "skipLibCheck": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "esModuleInterop": true
+  },
+  "include": [
+    "./test/*.ts",
+    "./test/**/*.ts",
+    "./buidler.config.ts"
+  ]
+}
