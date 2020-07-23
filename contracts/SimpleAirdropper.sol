@@ -1,7 +1,6 @@
 //SPDX-License-Identifier: Unlicense
 pragma solidity ^0.6.8;
 
-import "@nomiclabs/buidler/console.sol";
 import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import {SafeERC20} from "@openzeppelin/contracts/token/ERC20/SafeERC20.sol";
 import {SafeMath} from "@openzeppelin/contracts/math/SafeMath.sol";
@@ -90,8 +89,6 @@ contract SimpleAirdropper {
 
             _token.transferFrom(msg.sender, recipient, amount);
             total = total.add(amount);
-
-            console.log("Airdropping '%s' to '%s'", amount, recipient);
         }
 
         emit Airdropped(total, _token, msg.sender);
